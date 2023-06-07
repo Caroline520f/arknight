@@ -1,0 +1,187 @@
+// 登录框
+.loginBoard {
+    width: 22vw;
+    height: 45vh;
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 7vh;
+    border-radius: 2vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.25fr 1.5fr 2fr;
+    grid-template-areas:
+        "标题title"
+        "账密区users"
+        "按钮区buttons";
+    padding: 0 2vw;
+
+    // 注册框复杂动画 -- 定义旋转
+    @keyframes toRegister {
+        0% {
+            height: 45vh;
+            transform: rotateY(0deg)
+        }
+
+        10% {
+            height: 48vh;
+            transform: rotateY(10deg)
+        }
+
+        99% {
+            height: 55vh;
+            transform: rotateY(180deg)
+        }
+
+        100% {
+            height: 55vh;
+            transform: rotateY(0deg)
+        }
+    }
+
+    // 登录框复杂动画 -- 定义旋转
+    @keyframes toLogin {
+        0% {
+            height: 55vh;
+            transform: rotateY(0deg)
+        }
+
+        10% {
+            height: 48vh;
+            transform: rotateY(10deg)
+        }
+
+        99% {
+            height: 45vh;
+            transform: rotateY(180deg)
+        }
+
+        100% {
+            height: 45vh;
+            transform: rotateY(0deg)
+        }
+    }
+
+    // 标题
+    .title {
+        grid-area: 标题title;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #158FC5;
+        font-weight: bold;
+    }
+
+    // 账密
+    .userLogin {
+        grid-area: 账密区users;
+
+        input {
+            width: 100%;
+            height: 4.25vh;
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            padding-left: 0.25vw;
+            border-bottom: 1px solid #ccc
+        }
+
+        section:nth-child(even) {
+            color: #ff0000;
+            font-size: 13px;
+        }
+
+        .inputs {
+            display: flex;
+
+            input {
+                flex: 4.5
+            }
+
+            button {
+                flex: 5.5
+            }
+        }
+    }
+
+    // 登录框/注册框所有按钮
+    button {
+        background-color: #158FC5;
+        width: 100%;
+        height: 4.5vh;
+        border-radius: 3vw;
+        border: none;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #1174A0;
+    }
+
+    // 按钮区
+    .btns {
+        grid-area: 按钮区buttons;
+        display: flex;
+        flex-wrap: wrap;
+        // color: #158FC5;
+        font-size: 0.8rem;
+
+        section {
+            width: 100%;
+        }
+
+        .bilibili {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+// 切换按钮框
+.change {
+    position: absolute;
+    top: 78vh;
+    left: 45vw;
+    background: #fff;
+    width: 8vw;
+    height: 4vh;
+    border-radius: 6vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    padding: 0 0.5vw;
+}
+
+
+
+// 遮罩层
+.mathCode {
+    width: 30vw;
+    height: 40vh;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 3vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 1vw;
+
+    section {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+
+        input {
+            height: 3vh;
+            width: 16vw;
+            position: relative;
+            top: 3vh;
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            border-bottom: 1px solid #aaa;
+        }
+    }
+
+}

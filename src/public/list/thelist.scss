@@ -1,0 +1,120 @@
+.what {
+    position: relative;
+    width: 30vw;
+    height: 25vh;
+    margin-top: 2.7vw;
+    border-radius: 30px;
+    padding: 1.2vw;
+    background: rgba(255, 255, 255, 0.7);
+
+    section {
+        font-weight: bold;
+        padding: 1.4vh 0vw;
+        /* margin: 2.5vh 0vw; */
+        line-height: 1.5;
+    }
+
+    section>span:nth-child(2) {
+        position: absolute;
+        right: 3vw;
+        color: #aaa;
+        font-size: 0.6rem;
+    }
+}
+
+.baseic {
+    width: 31vw;
+    height: 20vh;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    font-size: 0.875rem;
+    padding: 1.4vw;
+    margin: 3vh 0vw;
+
+    section {
+        // font-size: 1.1rem;
+        // font-weight: bold;
+        // border-bottom: 1px solid #ccc;
+        // padding-bottom: 0.9vw;
+        display: flex;
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    .iinfo span {
+        padding: 0.25vh 0vw;
+        color: #C1C1C1;
+    }
+
+    .iinfo>span:nth-child(even) {
+        font-size: 0.8rem;
+        width: 60%;
+        color: #000;
+    }
+
+    span {
+        width: 32.7%;
+    }
+}
+
+.ttile {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1.5vh;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.iinfo span {
+    padding: 0.25vh 0vw;
+    color: #C1C1C1;
+}
+
+.iinfo>span:nth-child(even) {
+    font-size: 0.8rem;
+    width: 60%;
+    color: #000;
+}
+
+.realname {
+    width: 26vw;
+    height: 23vh;
+    background: rgba(255, 255, 255, 0.7);
+    margin-top: 6vh;
+    border-radius: 30px;
+    padding: 1.5vw;
+    left: 1.2vw;
+    position: relative;
+
+    .realNN {
+        section {
+            padding: 1.4vh 0vw;
+            font-size: 0.87rem;
+        }
+
+        section>span:nth-child(1) {
+            padding-right: 2vw;
+        }
+
+        section>span:nth-child(2) {
+            color: #000;
+        }
+    }
+}
+
+.thefinal {
+    display: flex;
+    position: relative;
+    /* left: -3vw; */
+    top: 5vh;
+    width: 30vw;
+    background: rgba(255, 255, 255, 0.8);
+    height: 100%;
+
+    .final {
+        .theBtns {
+            font-size: 1rem;
+        }
+    }
+
+}

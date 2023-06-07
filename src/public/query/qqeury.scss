@@ -1,0 +1,37 @@
+.query {
+    width: 28vw;
+    height: 40vh;
+    position: relative;
+    bottom: 18vh;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.uid {
+    position: absolute;
+    top: 41vh;
+    left: 21vw;
+}
+
+.record {
+    section {
+        width: 85%;
+        height: 6vh;
+        /* background: #333; */
+        background-position: center;
+        border-radius: 40px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-left: 2vw;
+        margin-top: 2.8vh;
+    }
+
+    span {
+        position: relative;
+        top: 1.5vh;
+        left: 2vw;
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+}

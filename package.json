@@ -8,10 +8,20 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "axios": "^1.4.0",
+    "chalk": "^5.2.0",
     "core-js": "^3.8.3",
+    "echarts": "^5.4.2",
+    "element-plus": "^2.3.5",
+    "fs": "^0.0.1-security",
+    "moment": "^2.29.4",
+    "path": "^0.12.7",
+    "qs": "^6.11.2",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.0",
+    "vuex-persistedstate": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
