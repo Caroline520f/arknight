@@ -49,7 +49,7 @@
                                 <el-breadcrumb-item v-show="route.meta.isHide">
                                     {{ metaName }}</el-breadcrumb-item>
                                 <el-breadcrumb-item v-show="route.meta.isHide" :style="{
-                                    Animation: 'breadcrumb 0.25s 0s linear',
+                                    Animation: isPlay ? 'breadcrumb 0.25s 0s 1 linear forwards' : '',
                                 }">{{ route.meta.title }}
                                 </el-breadcrumb-item>
                             </el-breadcrumb>
@@ -226,4 +226,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+
+</style>

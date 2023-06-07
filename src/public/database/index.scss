@@ -1,0 +1,10 @@
+@keyframes breadcrumb{
+    from{
+        transform: translateX(25px);
+        filter:opacity(0)
+    }
+    to{
+        transform: translateX(0px);
+        filter: opacity(1);
+    }
+}

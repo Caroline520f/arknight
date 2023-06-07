@@ -1,26 +1,25 @@
 import { onBeforeMount,reactive } from "vue";
 import { Request } from "@/hooks/request";
-import url from "@/api/url";
-export function homeData(){
+export function homeData(url){
     let dataList = reactive({
         messages:[]
     })
 
     onBeforeMount(()=>{
-        Request.get(url.database.home.messages).then(res=>{
-            dataList.data = {...res.data};
+        Request.get(url).then(res=>{
+            dataList.messages = {...res.data.menu};
         });
     })
     return dataList;
 }
-export function homeData2(){
+export function homeData2(url){
     let dataList = reactive({
         navTools:[]
     })
 
     onBeforeMount(()=>{
-        Request.get(url.database.home.navTools).then(res=>{
-            dataList.data = {...res.data};
+        Request.get(url).then(res=>{
+            dataList.navTools = {...res.data};
         });
     })
     return dataList;
