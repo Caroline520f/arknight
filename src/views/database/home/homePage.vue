@@ -23,23 +23,26 @@
             </div>
         </div>
     </div>
-    <div>
-        <h1>a</h1>
+    <div style="display: flex">
+        <div class="plan biggerOne" id="expMedicals">
+        </div>
+        <div class="plan smallOne" id="basicMedicals">
+
+        </div>
     </div>
-    <div>
-        <h1>c</h1>
-    </div>
-    <div>
-        <h1>d</h1>
-    </div>
-    <div>
-        <h1>e</h1>
+    <div style="display: flex">
+        <div class="plan smallOne spc">
+
+        </div>
+        <div class="plan biggerOne">
+
+        </div>
     </div>
 </template>
 
 <script>
 import homeCss from '@/public/database/homePage/home.scss'
-// import { expMedicals } from '@/echarts'
+import { expMedicals,basicMedicals } from '@/echarts'
 import { onMounted, toRefs } from 'vue';
 import { homeData } from '@/api/database/home/toBase';
 import url from '@/api/url';
@@ -47,13 +50,14 @@ export default {
     name: "homePage",
     setup() {
         onMounted(() => {
-            //    expMedicals(document.querySelector('#expMedicals'))
+            expMedicals(document.querySelector('#expMedicals'))
+            basicMedicals(document.querySelector('#basicMedicals'))
         })
-
+        
         return {
             homeCss,
             ...toRefs(homeData(url.database.home.messages)),
-
+            
         }
     }
 }

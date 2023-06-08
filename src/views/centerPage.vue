@@ -38,9 +38,9 @@
                         <span>客服中心</span>
                     </section>
                 </section>
-                
+
             </div>
-  
+
         </header>
         <main>
             <div v-if="bool">
@@ -50,7 +50,16 @@
                     <span>{{ telephone }}</span>
                 </section>
             </div>
-            <router-view></router-view>
+            <suspense>
+                <template #default>
+                    <router-view />
+                </template>
+                <template #fallback>
+                    <div>
+                        loading...
+                    </div>
+                </template>
+            </suspense>
         </main>
 
         <footer>
@@ -93,7 +102,6 @@ export default {
             page = reactive(JSON.parse(sessionStorage.getItem("menus"))).routes;
             userId = reactive(JSON.parse(localStorage.getItem("users"))).userId;
         }
-        console.log('the msg', page)
         function cancel() {
             allBtns.isDialog.isLogOut = false;
         }
