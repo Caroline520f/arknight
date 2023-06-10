@@ -110,15 +110,15 @@ export default {
     setup() {
         const router = useRouter();
         const route = useRoute();
+        console.log(route);
         let tabs = ref([]);
         let metaName = ref(""); // 控制面包屑的内容展示
         let title = ref(route.meta.title); // 控制标签页v-model值
-        console.log(route)
+        let isPlay = ref(false);
         onUpdated(() => {
             setTimeout(() => {
                 isPlay.value = false;
             }, 250);
-           
             let newStr = route.fullPath.slice(10);
             let newStr2 = newStr.slice(0, newStr.indexOf("/"));
             switch (newStr2) {
@@ -142,7 +142,6 @@ export default {
             }
             title.value = route.meta.title;
         });
-        let isPlay = ref(false);
         let isCollapse = ref(false);
         let pages = reactive(JSON.parse(sessionStorage.getItem("database")).databaseMenu);
         let userId = JSON.parse(localStorage.getItem("users")).userId;

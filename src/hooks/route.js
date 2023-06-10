@@ -33,7 +33,6 @@ function asyncComponent(path) {
 
 export function dealpaths(routes, index, name, newArr = []) {
   if (index > routes.length - 1) {
-   
     return [...new Set(newArr)];
   } else {
     if (Reflect.has(routes[index], name)) {
