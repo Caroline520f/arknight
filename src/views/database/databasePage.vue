@@ -113,10 +113,12 @@ export default {
         let tabs = ref([]);
         let metaName = ref(""); // 控制面包屑的内容展示
         let title = ref(route.meta.title); // 控制标签页v-model值
+        console.log(route)
         onUpdated(() => {
             setTimeout(() => {
                 isPlay.value = false;
             }, 250);
+           
             let newStr = route.fullPath.slice(10);
             let newStr2 = newStr.slice(0, newStr.indexOf("/"));
             switch (newStr2) {

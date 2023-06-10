@@ -1,5 +1,5 @@
 export default {
-    centerPage: {
+    centerPage: { 
         centerImg: "api/personalCenter",
         mathCode: 'api/user/getCode',
         getTelCode: 'api/user/telCode',

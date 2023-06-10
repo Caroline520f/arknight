@@ -11,7 +11,6 @@ export function layoutMenu() {
     })
     Request.get(url.database.layout.menu).then(res => {
         datList.menu = { ...res.data.menu }
-
         let a = dealpaths(res.data.menu, 0, "component")
         store.commit('database/CHANGE_MENULIST', { a, menuList: datList.menu })
         store.commit('CHANGE_STORE', 'isdatabase')
